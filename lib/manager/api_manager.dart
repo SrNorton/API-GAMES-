@@ -5,7 +5,7 @@ import 'package:consumer_api/models/genres.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-var apiKey = 'a646923df8b34a188b12e5f0867aa2bb';
+var apiKey = '';
 
 class ApiManager extends ChangeNotifier{
 
@@ -13,7 +13,7 @@ class ApiManager extends ChangeNotifier{
 Future<List<Game>> getGamesList() async {
   
   try {
-     var url = 'https://api.rawg.io/api/games?key=a646923df8b34a188b12e5f0867aa2bb';
+     var url = 'https://api.rawg.io/api/games?key=';
 
    await Future.delayed(const Duration(seconds: 3)); 
   var response = await http.get(
@@ -46,7 +46,7 @@ Future<List<Game>> getGamesList() async {
 Future<List<Genres>> getGenresList() async {
   
   try {
-     var url = 'https://api.rawg.io/api/genres?key=a646923df8b34a188b12e5f0867aa2bb';
+     var url = 'https://api.rawg.io/api/genres?key=';
 
    await Future.delayed(const Duration(seconds: 6)); 
   var response = await http.get(
